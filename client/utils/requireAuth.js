@@ -11,13 +11,13 @@ export default function(ComposedComponent) {
           type: 'error',
           text: 'You need to login to access this page'
         });
-        this.context.router.push('/login');
+        this.context.router.history.push('/login');
       }
     }
 
     componentWillUpdate(nextProps) {
       if (!nextProps.isAuthenticated) {
-        this.context.router.history.push('/');
+        this.context.router.history.push('/login');
       }
     }
 
@@ -39,7 +39,7 @@ export default function(ComposedComponent) {
 
   function mapStateToProps(state) {
     return {
-      isAuthenticated: state.auth.isAuthenticated,
+      isAuthenticated: state.auth.isAuthenticated
     }
   }
 
