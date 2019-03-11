@@ -30,7 +30,7 @@ exports.up = function(knex, Promise) {
     table.decimal('interest_expenses', 18, 2);
     table.decimal('net_financial_income', 18, 2);
     table.decimal('tax_expenses', 18, 2);
-    table.decimal('profit_loss', 18, 2);
+    table.decimal('profit_loss', 18, 2).notNullable();
     table.decimal('intangible_assets', 18, 2);
     table.decimal('property_plant_and_equipment', 18, 2);
     table.decimal('non_current_investments_and_receivables', 18, 2);
@@ -41,13 +41,13 @@ exports.up = function(knex, Promise) {
     table.decimal('short_term_receivables', 18, 2);
     table.decimal('cash', 18, 2);
     table.decimal('current_assets', 18, 2);
-    table.decimal('assets', 18, 2);
-    table.decimal('contributed_capital', 18, 2);
+    table.decimal('assets', 18, 2).notNullable();
+    table.decimal('contributed_capital', 18, 2).notNullable();
     table.decimal('reserves', 18, 2);
     table.decimal('dividend', 18, 2);
     table.decimal('retained_earnings', 18, 2);
     table.decimal('minority_interests', 18, 2);
-    table.decimal('equity', 18, 2);
+    table.decimal('equity', 18, 2).notNullable();
     table.decimal('provisions', 18, 2);
     table.decimal('short_term_debt', 18, 2);
     table.decimal('long_term_debt', 18, 2);

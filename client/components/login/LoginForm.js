@@ -9,6 +9,7 @@ import { deleteFlashAllMessages } from '../../actions/flashMessages';
 class LoginForm extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       identifier: '',
       password: '',
@@ -76,7 +77,9 @@ class LoginForm extends React.Component {
           type="password"
         />
 
-        <div className="form-group"><button className="btn btn-primary btn-lg" disabled={isLoading}>Login</button></div>
+        <div className="form-group">
+          <button className="btn btn-primary btn-lg" disabled={isLoading}>Login</button>
+        </div>
       </form>
     )
   }

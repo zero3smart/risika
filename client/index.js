@@ -26,7 +26,6 @@ if (localStorage.jwtToken) {
   store.dispatch(setCurrentUser(jwt.decode(localStorage.jwtToken)));
 }
 
-
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
