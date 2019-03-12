@@ -13,8 +13,6 @@ class TextFieldGroup extends React.Component {
   render() {
     const { field, value, label, error, type, onChange, checkUserExists } = this.props;
 
-    console.log(error);
-
     let fieldElement = (
       <input
         value={value}
@@ -42,11 +40,7 @@ class TextFieldGroup extends React.Component {
           onChange={onChange}
           name={field}
           className="form-control">
-          <option>1E0</option>
-          <option>1E3</option>
-          <option>1E6</option>
-          <option>1E9</option>
-          <option></option>
+          {this.props.data.map((item, i) => <option key={field + i}>{item}</option>)}
         </select>
       );
     } else if (type === "checkbox") {
@@ -78,7 +72,8 @@ TextFieldGroup.propTypes = {
   error: PropTypes.string,
   type: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
-  checkUserExists: PropTypes.func
+  checkUserExists: PropTypes.func,
+  data: PropTypes.array
 }
 
 TextFieldGroup.defaultProps = {

@@ -7,6 +7,7 @@ import { createEvent } from '../../actions/eventActions';
 class EventForm extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       title: '',
       errors: {},
