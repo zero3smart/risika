@@ -192,7 +192,7 @@ class FinancialReportsForm extends React.Component {
                 onChange={this.handleDateChange}
                 type="date"
               />
-              {/* */}
+
               <TextFieldGroup
                 field="reportingperiodenddate"
                 label="reporting period end date"
@@ -544,7 +544,7 @@ class FinancialReportsForm extends React.Component {
                 onChange={this.onChange}
                 type="number"
               />
-              {/* */}
+
               <TextFieldGroup
                 field="reserves"
                 label="reserves"
@@ -590,7 +590,6 @@ class FinancialReportsForm extends React.Component {
                 type="number"
               />
 
-              {/* */}
               <TextFieldGroup
                 field="provisions"
                 label="provisions"
